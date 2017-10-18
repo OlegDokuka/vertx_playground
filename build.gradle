@@ -1,0 +1,23 @@
+group 'com.example'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+mainClassName = 'com.example.VertxApp'
+
+ext {
+    vertxVersion = '3.4.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.reactivex', name: 'rxjava', version: '1.3.2'
+    compile group: 'io.reactivex', name: 'rxjava-reactive-streams', version: '1.2.1'
+    compile group: 'io.vertx', name: 'vertx-reactive-streams', version: vertxVersion
+    compile group: 'io.vertx', name: 'vertx-web', version: vertxVersion
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
